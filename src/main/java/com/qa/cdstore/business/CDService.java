@@ -4,10 +4,12 @@ public interface CDService {
 	String getAllCDs();
 
 	String getCD(Long id);
+  
+  String createCD(String cd);
 
-	String createCD(String movie);
-
-	String updateCD(Long id, String movie);
+	String updateCD(Long id, String cd);
 
 	String deleteCD(Long id);
+
+	String deleteAll();
 }
