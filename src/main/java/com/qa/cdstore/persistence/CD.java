@@ -1,28 +1,28 @@
-package com.qa.cinema.persistence;
+package com.qa.cdstore.persistence;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+//changed to CD
 @Entity
-public class Movie {
+public class CD {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String title;
+	private String artist;
 	private String genre;
-	private String published;
 
-	public Movie() {
+	public CD() {
 
 	}
 
-	public Movie(String title, String genre, String published) {
+	public CD(String title, String artist, String genre) {
 		this.title = title;
+		this.artist = artist;
 		this.genre = genre;
-		this.published = published;
 	}
 
 	public Long getId() {
@@ -37,20 +37,20 @@ public class Movie {
 		this.title = title;
 	}
 
+	public String getArtist() {
+		return artist;
+	}
+
+	public void setArtist(String genre) {
+		this.artist = artist;
+	}
+
 	public String getGenre() {
 		return genre;
 	}
 
-	public void setGenre(String genre) {
+	public void setGenre(String published) {
 		this.genre = genre;
-	}
-
-	public String getPublished() {
-		return published;
-	}
-
-	public void setPublished(String published) {
-		this.published = published;
 	}
 
 }

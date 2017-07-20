@@ -1,4 +1,4 @@
-package com.qa.cinema.business;
+package com.qa.cdstore.business;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Alternative;
