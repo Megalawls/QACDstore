@@ -11,7 +11,7 @@ import javax.ws.rs.Produces;
 
 import com.qa.cdstore.business.CDService;
 
-@Path("/cinema")
+@Path("/cdstore")
 public class CDEndpoint {
 
 	@Inject
