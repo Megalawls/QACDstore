@@ -30,6 +30,17 @@ public class CDServiceDBImpl implements CDService {
 	}
 
 	@Override
+	public String getCD(Long id) {
+		CD cdInDB = findCD(id);
+		if (cdInDB != null) {
+			return util.getJSONForObject(cdInDB);
+		}
+		else {
+			return "ERROR: CD does not exist.";
+		}
+	}
+
+	@Override
 	public String createCD(String cd) {
 		CD aCD = util.getObjectForJSON(cd, CD.class);
 		manager.persist(aCD);

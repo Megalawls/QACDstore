@@ -3,7 +3,9 @@ package com.qa.cdstore.business;
 public interface CDService {
 	String getAllCDs();
 
-	String createCD(String cd);
+	String getCD(Long id);
+  
+  String createCD(String cd);
 
 	String updateCD(Long id, String cd);
 
