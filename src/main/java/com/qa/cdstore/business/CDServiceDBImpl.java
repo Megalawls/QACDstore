@@ -56,6 +56,16 @@ public class CDServiceDBImpl implements CDService {
 		return "{\"message\": \"cd sucessfully deleted\"}";
 	}
 
+    @Override
+    public String deleteAll() {
+        Query query = manager.createQuery("Select m FROM CD m");
+        Collection<CD> cds = (Collection<CD>) query.getResultList();
+        for(CD cd: cds){
+            manager.remove(cd);
+        }
+        return "CD Library completely cleared";
+    }
+
 	private CD findCD(Long id) {
 		return manager.find(CD.class, id);
 	}
