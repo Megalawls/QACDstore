@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+<button>Send an HTTP POST request to a page and get the result back</button>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">>
+
+
+</script>
+<script>
+// $(document).ready(function(){
+//     $("button").click(function(){
+//         $.post("http://localhost:8080/qacdstore/rest/cdstore/json",
+//         {
+//           "title": "One Day Remains",
+//           "artist": "Alter Bridge",
+//           "genre": "Post-Grunge"
+//         },
+//         function(data,status){
+//             alert("Post successful");
+//         });
+//     });
+// });
+
+$("button").click(function(){
+    $.get("http://localhost:8080/qacdstore/rest/cdstore/json/", function(data, status){
+        alert("Data: " + data + "\nStatus: " + status);
+    });
+}); 
+</script>
+
+</html>
