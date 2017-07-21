@@ -2,18 +2,18 @@
 
 (function () {
 
-    angular.module('cinema').config(function ($stateProvider, $urlRouterProvider) {
+    angular.module('cdstore').config(function ($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise("/dashboard");
 
         $stateProvider.state("dashboard", {
             url: "/dashboard",
             templateUrl: "app/feature/dashboard/dashboard.html"
-        }).state("getmovie", {
-            url: "/getmovie",
-            templateUrl: "app/feature/movie/get-movie/get-movie.html"
-        }).state("addmovie", {
-            url: "/addmovie",
-            templateUrl: "app/feature/movie/add-movie/add-movie.html"
+        }).state("getCD", {
+            url: "/getCD",
+            templateUrl: "app/feature/CD/get-CD/get-CD.html"
+        }).state("addCD", {
+            url: "/addCD",
+            templateUrl: "app/feature/CD/add-CD/add-CD.html"
         })
     });
 }());
