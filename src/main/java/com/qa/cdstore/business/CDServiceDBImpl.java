@@ -36,7 +36,7 @@ public class CDServiceDBImpl implements CDService {
 			return util.getJSONForObject(cdInDB);
 		}
 		else {
-			return "ERROR: CD does not exist.";
+			return "{\"message\": \"ERROR: CD does not exist.\"}";
 		}
 	}
 
@@ -74,7 +74,7 @@ public class CDServiceDBImpl implements CDService {
         for(CD cd: cds){
             manager.remove(cd);
         }
-        return "CD Library completely cleared";
+        return "{\"message\": \"CD Library completely cleared\"}";
     }
 
 	private CD findCD(Long id) {
